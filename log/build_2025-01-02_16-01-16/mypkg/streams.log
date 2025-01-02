@@ -1,0 +1,28 @@
+[1.031s] Invoking command in '/home/taisei/ros2_ws/src/mypkg/build/mypkg': PYTHONPATH=/home/taisei/ros2_ws/src/mypkg/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/taisei/ros2_ws/src/mypkg/build/mypkg/build --no-deps symlink_data
+[1.332s] running develop
+[1.457s] running egg_info
+[1.458s] creating mypkg.egg-info
+[1.460s] writing mypkg.egg-info/PKG-INFO
+[1.461s] writing dependency_links to mypkg.egg-info/dependency_links.txt
+[1.461s] writing entry points to mypkg.egg-info/entry_points.txt
+[1.461s] writing requirements to mypkg.egg-info/requires.txt
+[1.462s] writing top-level names to mypkg.egg-info/top_level.txt
+[1.467s] writing manifest file 'mypkg.egg-info/SOURCES.txt'
+[1.504s] reading manifest file 'mypkg.egg-info/SOURCES.txt'
+[1.505s] writing manifest file 'mypkg.egg-info/SOURCES.txt'
+[1.559s] running build_ext
+[1.562s] Creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/python3.8/site-packages/site.py
+[1.565s] Creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/python3.8/site-packages/mypkg.egg-link (link to .)
+[1.566s] Installing listener script to /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+[1.568s] Installing talker script to /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+[1.568s] 
+[1.568s] Installed /home/taisei/ros2_ws/src/mypkg/build/mypkg
+[1.569s] running symlink_data
+[1.569s] creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share
+[1.570s] creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index
+[1.570s] creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index
+[1.570s] creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+[1.571s] symbolically linking /home/taisei/ros2_ws/src/mypkg/build/mypkg/resource/mypkg -> /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+[1.571s] creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/mypkg
+[1.572s] symbolically linking /home/taisei/ros2_ws/src/mypkg/build/mypkg/package.xml -> /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/mypkg
+[1.614s] Invoked command in '/home/taisei/ros2_ws/src/mypkg/build/mypkg' returned '0': PYTHONPATH=/home/taisei/ros2_ws/src/mypkg/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/taisei/ros2_ws/src/mypkg/build/mypkg/build --no-deps symlink_data

@@ -1,0 +1,26 @@
+running develop
+running egg_info
+creating mypkg.egg-info
+writing mypkg.egg-info/PKG-INFO
+writing dependency_links to mypkg.egg-info/dependency_links.txt
+writing entry points to mypkg.egg-info/entry_points.txt
+writing requirements to mypkg.egg-info/requires.txt
+writing top-level names to mypkg.egg-info/top_level.txt
+writing manifest file 'mypkg.egg-info/SOURCES.txt'
+reading manifest file 'mypkg.egg-info/SOURCES.txt'
+writing manifest file 'mypkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/python3.8/site-packages/site.py
+Creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/python3.8/site-packages/mypkg.egg-link (link to .)
+Installing listener script to /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+Installing talker script to /home/taisei/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+
+Installed /home/taisei/ros2_ws/src/mypkg/build/mypkg
+running symlink_data
+creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share
+creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index
+creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index
+creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+symbolically linking /home/taisei/ros2_ws/src/mypkg/build/mypkg/resource/mypkg -> /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+creating /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/mypkg
+symbolically linking /home/taisei/ros2_ws/src/mypkg/build/mypkg/package.xml -> /home/taisei/ros2_ws/src/mypkg/install/mypkg/share/mypkg

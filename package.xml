@@ -3,11 +3,13 @@
 <package format="3">
   <name>mypkg</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>a package for practice</description>
   <maintainer email="s23c1098hm@s.chibakoudai.jp">taisei</maintainer>
-  <licence>BSD-3-Clause</license>
+  <license>BSD-3-Clause</license>
 
-
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
