@@ -8,21 +8,6 @@ dir=~
 # ros2_ws ディレクトリに移動
 cd $dir/ros2_ws
 
-# ROS 2 の環境設定
-if [ -f /opt/ros/foxy/setup.bash ]; then
-    source /opt/ros/foxy/setup.bash  # 適切なディストリビューションを指定
-else
-    echo "Error: /opt/ros/foxy/setup.bash not found"
-    exit 1
-fi
-
-if [ -f $dir/ros2_ws/install/setup.bash ]; then
-    source $dir/ros2_ws/install/setup.bash
-else
-    echo "Error: $dir/ros2_ws/install/setup.bash not found"
-    exit 1
-fi
-
 # mypkg パッケージをビルド
 echo "Building the package..."
 colcon build --packages-select mypkg
