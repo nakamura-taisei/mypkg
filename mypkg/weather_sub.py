@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import datetime
-import locale
 
 class WeatherSubscriber(Node):
     def __init__(self):
@@ -19,14 +18,16 @@ class WeatherSubscriber(Node):
 
     def callback(self, msg):
         try:
-            # 受信データをISO形式の日付として解析
-            datetime_obj = datetime.datetime.fromisoformat(msg.data)
+            # 受信したメッセージを日時、曜日に分割
+            datetime_str, weekday = msg.data.split(", ")
+            # 日時部分をISO形式に変換
+            datetime_obj = datetime.datetime.strptime(datetime_str.replace("日時: ", ""), "%Y年%m月%d日 %H:%M:%S")
+            
             # 和暦に変換
             wareki = self.convert_to_wareki(datetime_obj)
 
-            # ログに表示
-            self.get_logger().info(f"受信日時: {msg.data}")
-            self.get_logger().info(f"和暦: {wareki}")
+            # 和暦、曜日、時間をログに表示
+            self.get_logger().info(f"和暦: {wareki},時間: {datetime_obj.strftime('%H:%M:%S')},{weekday},")
         except ValueError as e:
             self.get_logger().error(f"日時データの解析に失敗しました: {e}")
 
@@ -44,14 +45,9 @@ class WeatherSubscriber(Node):
             if dt >= datetime.datetime(*start_date):
                 year_in_era = dt.year - era_start + 1
                 era_year = "元" if year_in_era == 1 else str(year_in_era)
-                return f"{era_name}{era_year}年{dt.month}月{dt.day}日（{self.get_weekday_jp(dt)}）"
+                return f"{era_name}{era_year}年{dt.month}月{dt.day}日"
 
         return "不明な元号"
-
-    def get_weekday_jp(self, dt):
-        # 日本語の曜日を取得
-        locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
-        return dt.strftime("%A")
 
     def stop_node(self):
         self.get_logger().info("10秒経過。ノードを終了します。")
@@ -59,9 +55,13 @@ class WeatherSubscriber(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = WeatherSubscriber()
-    rclpy.spin(node)
-    node.destroy_node()
+
+    # サブスクライバーノード作成
+    subscriber_node = WeatherSubscriber()
+    rclpy.spin(subscriber_node)
+
+    subscriber_node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

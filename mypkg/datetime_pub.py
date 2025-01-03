@@ -3,36 +3,46 @@ from rclpy.node import Node
 from std_msgs.msg import String
 from datetime import datetime
 
-class DateTimePublisher(Node):
-    def __init__(self):
-        super().__init__('datetime_publisher')
-        self.publisher_ = self.create_publisher(String, 'datetime_topic', 10)
-        self.timer = self.create_timer(1.0, self.publish_message)  # 1秒ごとに実行
-        self.start_time = self.get_clock().now()  # 開始時間を記録
-        self.timer_10s = self.create_timer(10.0, self.stop_node)  # 10秒後に停止
-        self.count = 0
+def main(args=None):
+    # ROS 2の初期化
+    rclpy.init(args=args)
 
-    def publish_message(self):
-        self.count += 1
+    # シンプルなノードの作成
+    node = Node("datetime")  # この部分で単一のNodeインスタンスを作成
+    node.get_logger().info("待機中")
+
+    # パブリッシャーの作成
+    publisher = node.create_publisher(String, 'datetime_topic', 10)
+
+    # コールバック関数の定義
+    def timer_callback():
         current_time = datetime.now()
         formatted_time = current_time.strftime("%Y年%m月%d日 %H:%M:%S")
         weekdays = ['月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日', '日曜日']
         day_of_week = weekdays[current_time.weekday()]
-        message = f"カウント: {self.count}, 日時: {formatted_time}, 曜日: {day_of_week}"
+        message = f"日時: {formatted_time}, 曜日: {day_of_week}"
+
         msg = String()
         msg.data = message
-        self.publisher_.publish(msg)
-        self.get_logger().info(f"配信: {message}")
+        publisher.publish(msg)
+        node.get_logger().info(f"配信: {message}")
 
-    def stop_node(self):
-        self.get_logger().info("10秒経過。ノードを終了します。")
+    # タイマーの作成
+    timer = node.create_timer(1.0, timer_callback)
+
+    # 10秒後に停止する仕組み
+    def stop_node():
+        node.get_logger().info("10秒経過。ノードを終了します。")
         rclpy.shutdown()
 
-def main(args=None):
-    rclpy.init(args=args)
-    node = DateTimePublisher()
+    node.create_timer(10.0, stop_node)
+
+    # ノードの実行
     rclpy.spin(node)
+
+    # クリーンアップ
     node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
