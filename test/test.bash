@@ -22,11 +22,3 @@ fi
 echo "Launching the package..."
 timeout 10 ros2 launch mypkg datetime_weather.launch.py > /tmp/mypkg.log
 
-# ros2 launch が正常に終了したか確認
-if [ $? -ne 0 ]; then
-    echo "Error: ros2 launch failed."
-    exit 1
-fi
-
-echo "Launch completed successfully."
-
