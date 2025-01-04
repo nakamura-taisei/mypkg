@@ -14,7 +14,7 @@ def generate_launch_description():
     # weather_sub.py ノードの設定
     japanese_sub_node = launch_ros.actions.Node(
         package='mypkg',  # パッケージ名
-        executable='weather_sub',  # 実行するファイルの名前
+        executable='japanese_sub',  # 実行するファイルの名前
         output='screen'  # ログを端末に表示
     )
 
