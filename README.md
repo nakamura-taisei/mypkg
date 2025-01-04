@@ -43,5 +43,5 @@ ros2 launch mypkg datetime_weather.launch.py
 和暦: 令和7年1月4日(金曜日)  
 
 
-##ライセンス
+## ライセンス
 - このソフトウェアパッケージは3条項BSDライセンスの下，再頒布および使用が許可されます．- © 2024 nakamura-taisei
