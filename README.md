@@ -2,7 +2,7 @@
 - このパッケージは、ROS2の一部を使用して作成したものです。パブリッシャーとサブスクライバーのノードを使って、現在の日時を1秒ごとに配信し、和暦に変換して表示します。
 
 ## テスト環境
-![Build Status](https://img.shields.io/github/workflow/status/nakamura-taisei/mypkg/ROS%202%20CI?label=test&logo=github)
+[![Build Status](https://img.shields.io/github/workflow/status/nakamura-taisei/mypkg/ROS%202%20CI?label=test&logo=github)](https://github.com/nakamura-taisei/mypkg/actions)
 
 ## 必要なソフトウェア
 - Python
