@@ -19,4 +19,3 @@ def generate_launch_description():
     )
 
     return launch.LaunchDescription([datetime_pub_node, japanese_sub_node])
-

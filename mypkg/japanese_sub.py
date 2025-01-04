@@ -3,7 +3,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 import datetime
 
-class WeatherSubscriber(Node):
+class Japanese_sub(Node):
     def __init__(self):
         super().__init__('japanese_subscriber')
         self.subscription = self.create_subscription(
@@ -57,7 +57,7 @@ def main(args=None):
     rclpy.init(args=args)
 
     # サブスクライバーノード作成
-    subscriber_node = JapaneseSubscriber()
+    subscriber_node = Japanese_sub()
     rclpy.spin(subscriber_node)
 
     subscriber_node.destroy_node()
