@@ -10,13 +10,13 @@ def generate_launch_description():
         executable='datetime_pub',  # 実行するファイルの名前
         output='screen'  # ログを端末に表示
     )
-    
+
     # weather_sub.py ノードの設定
-    weather_sub_node = launch_ros.actions.Node(
+    japanese_sub_node = launch_ros.actions.Node(
         package='mypkg',  # パッケージ名
         executable='weather_sub',  # 実行するファイルの名前
         output='screen'  # ログを端末に表示
     )
 
-    return launch.LaunchDescription([datetime_pub_node, weather_sub_node])
+    return launch.LaunchDescription([datetime_pub_node, japanese_sub_node])
 

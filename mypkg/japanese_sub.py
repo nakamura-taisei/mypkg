@@ -5,7 +5,7 @@ import datetime
 
 class WeatherSubscriber(Node):
     def __init__(self):
-        super().__init__('weather_subscriber')
+        super().__init__('japanese_subscriber')
         self.subscription = self.create_subscription(
             String,
             'datetime_topic',
@@ -57,7 +57,7 @@ def main(args=None):
     rclpy.init(args=args)
 
     # サブスクライバーノード作成
-    subscriber_node = WeatherSubscriber()
+    subscriber_node = JapaneseSubscriber()
     rclpy.spin(subscriber_node)
 
     subscriber_node.destroy_node()
@@ -65,4 +65,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-

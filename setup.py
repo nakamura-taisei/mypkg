@@ -24,7 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
         'datetime_pub = mypkg.datetime_pub:main',
-        'weather_sub = mypkg.weather_sub:main',
+        'japanese_sub = mypkg.japanese_sub:main',
         ],
     },
 )
