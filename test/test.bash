@@ -13,4 +13,8 @@ cd $dir/ros2_ws
 colcon build
 
 # datetime_weather.launch.py を実行（10秒間タイムアウトし、ログは /tmp/mypkg.log に保存）
-ros2 launch mypkg datetime_weather.launch.py 
+timeout 10 ros2 launch mypkg datetime_weather.launch.py 
+
+cat /tmp/mypkg.log |
+grep 'datetime_weather.launch.py: 10'
+
