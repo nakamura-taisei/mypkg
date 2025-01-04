@@ -1,6 +1,0 @@
-source;share/mypkg/hook/pythonpath.ps1
-source;share/mypkg/hook/pythonpath.dsv
-source;share/mypkg/hook/pythonpath.sh
-source;../../build/mypkg/share/mypkg/hook/pythonpath_develop.ps1
-source;../../build/mypkg/share/mypkg/hook/pythonpath_develop.dsv
-source;../../build/mypkg/share/mypkg/hook/pythonpath_develop.sh
