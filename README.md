@@ -1,8 +1,8 @@
 # mypkg
-千葉工業大学　未来ロボティクス学科２０２４年度のロボットシステム学課題２で作成したファイルに追加ししたものです。
+- このパッケージは、ROS2の一部を使用して作成したものです。パブリッシャーとサブスクライバーのノードを使って、現在の日時を1秒ごとに配信し、和暦に変換して表示します。
 
-![Build Status](https://img.shields.io/github/workflow/status/nakamura-taisei/mypkg/CI?label=build) 
-![License](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)
+## テスト結果
+![Build Status](https://img.shields.io/github/workflow/status/nakamura-taisei/mypkg/ci?label=test&logo=github)
 
 ## 必要なソフトウェア
 - Python
