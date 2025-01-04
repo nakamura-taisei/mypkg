@@ -1,5 +1,8 @@
 # mypkg
-講義
+千葉工業大学　未来ロボティクス学科２０２４年度のロボットシステム学課題２で作成したファイルに追加ししたものです。
+
+![Build Status](https://img.shields.io/github/workflow/status/nakamura-taisei/mypkg/CI?label=build) 
+![License](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)
 
 ## 必要なソフトウェア
 - Python
