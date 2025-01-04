@@ -24,6 +24,13 @@
 - ノード名: `wareki_converter`
   - 購読トピック: `/current_datetime` (型: `std_msgs/String`)
 
+## 実行方法
+- cd mypkg
+
+- パブリッシャ
+  - ros2 run mypkg datetime_pub.py
+- サブスクライバ
+  - ros2 run mypkg japanese_sub.py
 
 ## 動作  
 - パブリッシャ  
