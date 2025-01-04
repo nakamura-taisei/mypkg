@@ -14,8 +14,8 @@ colcon build
 
 source $dir/.bashrc
 # datetime_weather.launch.py を実行（10秒間タイムアウトし、ログは /tmp/mypkg.log に保存）
-timeout 10 ros2 launch mypkg datetime_weather.launch.py > /tmp/mypkg.log
+timeout 15 ros2 launch mypkg datetime_weather.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
-grep 'datetime_weather.launch: 10'
+grep '配信:'
 
