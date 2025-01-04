@@ -17,5 +17,5 @@ source $dir/.bashrc
 timeout 10 ros2 launch mypkg datetime_weather.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
-grep 'datetime_weather.launch.py: 10'
+grep 'datetime_weather.launch: 10'
 
