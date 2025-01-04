@@ -23,25 +23,6 @@
 
 出力テキスト  
 - サブスクライバ  
-和暦: 令和7年1月4日(土曜日)  
-
-
-## インストール方法  
-- 1.このリポジトリをクローンします  
-git clone git@github.com:nakamura-taisei/mypkg.git  
-
-- 2.ディレクトリに移動  
-cd mypkg  
-
-- 3.必要な依存関係をインストールします(ROS 2の場合)  
-colcon build  
-source install/setup.bash  
-
-- 4.使い方  
-ros2 launch mypkg datetime_weather.launch.py  
-日時: 2025年01月04日 12:34:56, 曜日: 金曜日  
-和暦: 令和7年1月4日(金曜日)  
-
-
+和暦: 令和7年1月4日(土曜日)
 ## ライセンス
 - このソフトウェアパッケージは3条項BSDライセンスの下，再頒布および使用が許可されます．- © 2024 nakamura-taisei
